@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: new
+  labels:
+    app: new
+  namespace: namespace-workflow-1690453475159
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: new
+  template:
+    metadata:
+      labels:
+        app: new
+    spec:
+      containers:
+        - name: new
+          image: noushadregistry.azurecr.io/image-workflow-1690453475159:latest
+          ports:
+            - containerPort: 3000
