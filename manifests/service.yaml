@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: asdfghjkjhgfdsasdfghjkl
+  namespace: namespace-workflow-1690454439625
+spec:
+  type: LoadBalancer
+  selector:
+    app: asdfghjkjhgfdsasdfghjkl
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
