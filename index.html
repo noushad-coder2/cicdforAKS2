@@ -1,88 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Ambition Calculator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f8f8f8; /* Light gray background color */
-            color: #333; /* Dark gray font color */
-        }
-        h1 {
-            color: #007BFF; /* Blue title color */
-            animation: blink 1s infinite; /* Blinking effect for the title */
-        }
-        button {
-            background-color: #007BFF; /* Blue button color */
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        button:hover {
-            background-color: #0056b3; /* Hover color */
-        }
-        @keyframes blink {
-            0%, 100% {
-                color: #007BFF; /* Blue title color */
-            }
-            50% {
-                color: #333; /* Dark gray font color */
-            }
-        }
-    </style>
+  <title>Simple Node.js Web App</title>
 </head>
 <body>
-    <h1>Ambition Calculator</h1>
-    <form onsubmit="return false">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" required>
-        <br>
-        <label for="age">Your Age:</label>
-        <input type="number" id="age" required>
-        <br>
-        <label for="dream">Your Biggest Dream:</label>
-        <input type="text" id="dream" required>
-        <br>
-        <button type="button" onclick="calculateAmbition()">Calculate Ambition</button>
-    </form>
-
-    <div id="ambitionResult" style="display: none; margin-top: 20px;"></div>
-
-    <script>
-        function calculateAmbition() {
-            var name = document.getElementById("name").value;
-            var age = document.getElementById("age").value;
-            var dream = document.getElementById("dream").value;
-
-            // Randomly select the future profession based on answers
-            var professions = [
-                "Astronaut",
-                "Rock Star",
-                "President",
-                "Scientist",
-                "Actor",
-                "Artist",
-                "Chef",
-                "Entrepreneur",
-                "Writer",
-                "Athlete",
-                "Engineer",
-                "Doctor",
-                "Lawyer",
-                "Teacher"
-            ];
-
-            var randomIndex = Math.floor(Math.random() * professions.length);
-            var profession = professions[randomIndex];
-
-            // Display the result
-            var resultDiv = document.getElementById("ambitionResult");
-            resultDiv.innerHTML = `<p>Dear ${name}, at the age of ${age}, your biggest dream to become a ${dream}, suggests that you may become a future <strong>${profession}</strong>! Dream big and work hard to achieve your ambitions!</p>`;
-            resultDiv.style.display = "block";
-        }
-    </script>
+  <h1>Hello, Node.js Web App!</h1>
 </body>
 </html>
